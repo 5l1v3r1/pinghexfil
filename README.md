@@ -20,7 +20,8 @@ Exiting.
 root@demon:~/pinghexfil# 
 ```
 ### Step 2: Gather Bytes via Wireshark
-
+Simply right click on the data and choose **Select->as a Hex Stream** and paste the output into a file, as I did in the file `payloads/example1.txt`
+![Wireshark Screenshot](images/wireshark.png)
 
 ### Step 3: Decode the Bytes
 ```

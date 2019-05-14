@@ -45,8 +45,8 @@ with open(argv[2],'rb') as byte:
 	hexByte = byte.read(1) # create a hax value of the byte
 	while (hexByte != ""):
 		byteCount+=1 # increment counter
-		fileData += hexByte # binascii.hexlify(hexByte) # append the byte to string
-		if (byteCount==60000): # check string length, we can only send 60kB of data in packet
+		fileData += binascii.hexlify(hexByte) # append the "hexlified" byte to string
+		if (byteCount==30000): # check string length, we can only send 60kB of data in packet
 			sendData(fileData,dstIp) # send it
 			packetCount+=1
 			fileData = "" # reset the fileData string

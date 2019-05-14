@@ -1,7 +1,7 @@
 # PingHexFil
 Exfiltration of small files using ICMP
 ## Data Exfiltration using ICMP
-*NOTE* This ONLY works with files smaller than 60kB. This is due to the packet length restrictions and updates will come to break up files into 60kB chunks in the near future.
+Pass a file name, destination IP address, and "--stealth" (optional), to the application. The application will chunk the file into 60K sizes and send each "chunk" as the data payload of the ICMP request to the destination IP address. Ensure that you are capturing ICMP packets at the destination before sending. You can do this using Wireshark.
 ## Usage
 The following is done with the example file, `examples/example1.txt`
 ### Step 1: Send the Bytes via ICMP

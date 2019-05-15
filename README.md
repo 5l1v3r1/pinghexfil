@@ -1,5 +1,5 @@
 # PingHexFil
-Exfiltration of small files using ICMP
+Exfiltration of files using ICMP (ping). This works in instances when you have spawned a shell but cannot exfiltrate data from other protocols due to firewalls, etc. If Ping is allowed, exploit it with the following application.
 ## Data Exfiltration using ICMP
 Pass a file name, destination IP address, and "--stealth" (optional), to the application. The application will chunk the file into 60K sizes and send each "chunk" as the data payload of the ICMP request to the destination IP address. Ensure that you are capturing ICMP packets at the destination before sending. You can do this using Wireshark.
 ## Usage

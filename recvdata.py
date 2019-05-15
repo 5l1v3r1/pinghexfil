@@ -17,3 +17,4 @@ for packet in data: # loop through packets and concatenate the data
 fh=open(fileName,"w") # overwrite it
 fh.write(fileData)
 fh.close() # close it up
+print "[+] Transfer complete. File "+fileName+" written."

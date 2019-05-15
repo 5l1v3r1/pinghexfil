@@ -14,8 +14,8 @@ stealth=False # boolean for enabling stealth mode
 # User-defined function to print usage and exit
 def usage():
 	usageMsg="""
- PingHexFil - 2019 WeakNetLabs
-
+ PingHexFil - Transmitter
+ 2019 WeakNetLabs
  Usage: ./ping.py IP ADDRESS) (FILE NAME) [optional: ](--stealth)]
 """
 	print usageMsg
